@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "albums",
   "info": {
-    "name": "Album"
+    "name": "Album",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -13,20 +14,17 @@
     "title": {
       "type": "string"
     },
-    "photos": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "seo": {
       "type": "uid",
       "targetField": "title"
+    },
+    "galery": {
+      "type": "component",
+      "repeatable": false,
+      "component": "presentation.galery"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
