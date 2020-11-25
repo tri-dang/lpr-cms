@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "metas",
+  "info": {
+    "name": "meta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "data": {
+      "type": "json"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
