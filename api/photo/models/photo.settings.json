@@ -36,8 +36,11 @@
       "type": "string"
     },
     "galeries": {
-      "via": "photos",
-      "collection": "galery"
+      "collection": "galery",
+      "via": "photos"
+    },
+    "category": {
+      "model": "category"
     }
   }
 }

@@ -18,8 +18,8 @@
       "type": "string"
     },
     "photos": {
-      "collection": "photo",
       "via": "galeries",
+      "collection": "photo",
       "dominant": true
     },
     "description": {
