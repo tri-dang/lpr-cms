@@ -12,19 +12,30 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "seo": {
+    "slug": {
       "type": "uid",
       "targetField": "title"
     },
-    "galery": {
-      "type": "component",
-      "repeatable": false,
-      "component": "presentation.galery"
-    },
     "description": {
       "type": "richtext"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "galeries": {
+      "collection": "galery",
+      "via": "albums"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "categories": {
+      "via": "albums",
+      "collection": "category"
     }
   }
 }

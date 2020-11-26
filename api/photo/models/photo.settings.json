@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "metas",
+  "collectionName": "photos",
   "info": {
-    "name": "meta",
+    "name": "Photo",
     "description": ""
   },
   "options": {
@@ -11,12 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     },
     "picture": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -26,14 +28,16 @@
       "plugin": "upload",
       "required": false
     },
-    "data": {
-      "type": "json"
-    },
-    "content": {
-      "type": "richtext"
-    },
     "slug": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "title"
+    },
+    "name": {
+      "type": "string"
+    },
+    "galeries": {
+      "via": "photos",
+      "collection": "galery"
     }
   }
 }

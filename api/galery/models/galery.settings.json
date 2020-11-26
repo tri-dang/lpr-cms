@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galeries",
+  "info": {
+    "name": "galery",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "albums": {
+      "via": "galeries",
+      "collection": "album",
+      "dominant": true
+    },
+    "photos": {
+      "collection": "photo",
+      "via": "galeries",
+      "dominant": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
