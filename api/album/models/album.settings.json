@@ -26,16 +26,15 @@
       "type": "string",
       "required": true
     },
-    "galeries": {
-      "collection": "galery",
-      "via": "albums"
+    "galery": {
+      "model": "galery"
     },
     "content": {
       "type": "richtext"
     },
     "categories": {
-      "via": "albums",
-      "collection": "category"
+      "collection": "category",
+      "via": "albums"
     }
   }
 }

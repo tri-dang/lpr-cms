@@ -17,11 +17,6 @@
     "title": {
       "type": "string"
     },
-    "albums": {
-      "via": "galeries",
-      "collection": "album",
-      "dominant": true
-    },
     "photos": {
       "collection": "photo",
       "via": "galeries",
