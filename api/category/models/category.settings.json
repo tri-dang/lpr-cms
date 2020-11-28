@@ -22,9 +22,20 @@
       "targetField": "name"
     },
     "albums": {
-      "via": "categories",
       "collection": "album",
+      "via": "categories",
       "dominant": true
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
     }
   }
 }
