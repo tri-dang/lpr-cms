@@ -18,8 +18,8 @@
       "type": "string"
     },
     "photos": {
-      "via": "galeries",
       "collection": "photo",
+      "via": "galeries",
       "dominant": true
     },
     "description": {
@@ -28,6 +28,17 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
