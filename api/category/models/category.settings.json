@@ -36,6 +36,9 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "position": {
+      "type": "integer"
     }
   }
 }
