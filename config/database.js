@@ -10,7 +10,7 @@ module.exports = ({ env }) => ({
         database: env('DATABASE_NAME', 'lpr-cms'),
         username: env('DATABASE_USERNAME', 'tridang'),
         password: env('DATABASE_PASSWORD', ''),
-        ssl: env.bool('DATABASE_SSL', false),
+        ssl: process.env.NODE_ENV === "production",
       },
       options: {}
     },
